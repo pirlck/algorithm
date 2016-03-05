@@ -44,4 +44,13 @@ int PrintList(ListNode* head)
 	return 0;
 }
 
+//递归 也可以用堆栈来做
+void  ReveList(ListNode* pHead)
+{
+	if (pHead == NULL)
+		return;
+	ReveList(pHead->pNext);
+	cout << pHead->key << "->";
+}
+
 #endif
